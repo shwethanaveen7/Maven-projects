@@ -12,6 +12,26 @@ public class Contacts {
 	
 	@FindBy(xpath = "//img[@alt='Create Contact...']")
 	private WebElement createOrgImg;
+	
+	@FindBy(name="search_text")
+	private WebElement searchEdt;
+	
+	@FindBy(name="search")
+	private WebElement searchNow;
+	
+	
+
+	public WebElement getSearchEdt() {
+		return searchEdt;
+	}
+
+
+
+	public WebElement getSearchNow() {
+		return searchNow;
+	}
+
+
 
 	public WebElement getCreateOrgImg() {
 		return createOrgImg;

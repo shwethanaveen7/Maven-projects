@@ -8,11 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.crm.autodesk.genericlib.WebDriverUtiles;
 
 
-/**
- * 
- * @author Deepak
- *
- */
 public class CreateNewOrganization extends WebDriverUtiles{
 	WebDriver driver;
 	public CreateNewOrganization(WebDriver driver) { 

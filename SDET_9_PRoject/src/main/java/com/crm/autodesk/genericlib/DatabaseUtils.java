@@ -13,6 +13,27 @@ import com.mysql.cj.jdbc.Driver;
  *
  */
 public class DatabaseUtils {
+	 Connection con = null;
+	 ResultSet result = null;
+
+	
+	public void connectToDB() {
+		Driver driverRef;
+		try {
+			driverRef = new Driver();
+			DriverManager.registerDriver(driverRef);
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/SDET", "root", "root");
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+	
+	}
+	
+	
+	public void closeDb() throws SQLException {
+		con.close();
+	}
 	
 	
 	/**

@@ -47,7 +47,7 @@ public class CreateNewConatct extends WebDriverUtiles{
 		orgPage.getSearchEdt().sendKeys(orgName);
 		orgPage.getSearchNow().click();
 		driver.findElement(By.xpath("//a[text()='"+orgName+"']")).click();
-		//swict to Parent
+		//swicth to Parent
 		swicthToWindow(driver, "Contacts");
 		saveBtn.click();
 	}

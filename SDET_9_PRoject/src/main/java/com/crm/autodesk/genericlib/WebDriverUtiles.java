@@ -38,6 +38,24 @@ public class WebDriverUtiles {
 		sel.selectByIndex(index);
 		
 	}
+	/**
+	  * used to wait for expected element in GUI based on Xpath
+	  * @param element
+	  * @throws Throwable
+	  */
+	 public void waitAndClick(WebDriver driver , String xpath) throws Throwable {
+	    int count = 0;
+	         while(count < 40) {
+	      try {
+	       driver.findElement(By.xpath(xpath)).click();
+	        break;
+	      }catch (Throwable e) {
+	     Thread.sleep(500);
+	     count++;
+	      }
+	         }
+	 }
+
 	
 	/**
 	 *  used to wait for Element to be clickable in GUI  & check for the elemnet for every 500 milisecond , 
